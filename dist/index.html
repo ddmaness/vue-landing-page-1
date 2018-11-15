@@ -1,0 +1,51 @@
+<DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Vue Landing Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--css reset from https://meyerweb.com/eric/tools/css/reset/-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://meyerweb.com/eric/tools/css/reset/reset.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <page-header></page-header>
+        <hero>
+            <sign-up-form></sign-up-form>
+        </hero>
+        <list>
+            <list-item v-for="(item, key, index) in benefitItems"
+            :src='item.src'
+            :heading='item.heading'
+            :text='item.text'
+            :key='index'>
+            </list-item>
+        </list>
+        <image-text-sbs v-for="(item, key, index) in imageTextCombos"
+        :src='item.src'
+        :heading='item.heading'
+        :text='item.text'
+        :key='index'
+        >
+        </image-text-sbs>
+        <list>
+            <h2>What people are saying</h2>
+            <list-item v-for="(item, key, index) in testimonials"
+            :src='item.src'
+            :heading='item.heading'
+            :text='item.text'
+            :key='index'>
+
+            </list-item>
+        </list>
+        <call-to-action>
+            <sign-up-form></sign-up-form>
+        </call-to-action>
+        <landing-footer></landing-footer>
+    </div>
+ <script src="index.js"></script>    
+</body>
+</html>
