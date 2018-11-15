@@ -10,9 +10,10 @@ var imagemin = require('gulp-imagemin');
 
 gulp.task('default', function(){
 	gulp.watch('sass/styles.scss', gulp.series('styles'));
-	gulp.watch('./index.js').on('change', browserSync.reload);
+	gulp.watch('./index.js', gulp.series('scripts'));
 	gulp.watch('./index.html', gulp.series('copy-html'));
 	gulp.watch('./dist/index.html').on('change', browserSync.reload);
+	gulp.watch('./dist/index.js').on('change', browserSync.reload);
 	browserSync.init({
 		server: './dist'
 	});

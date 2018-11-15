@@ -43,7 +43,7 @@ Vue.component('list', {
 Vue.component('list-item', {
   props: ['heading', 'text', 'src', 'alt'],
   template: `<div>
-                    <img :src="src">
+					<img height="150px" :src="src">
                     <h3>{{ heading }}</h3>
                     <p>{{ text }}</p>
                 </div>`
@@ -70,43 +70,43 @@ var app = new Vue({
   el: '#app',
   data: {
     benefitItems: [{
-      src: 'images/cat.jpg',
-      heading: 'Cat',
-      text: 'a cat'
+      src: 'images/monitor.png',
+      heading: 'Ut pariatur',
+      text: 'Adipisicing eiusmod amet voluptate nisi consequat magna minim non voluptate. Commodo sint veniam commodo duis cillum in. Elit non aute commodo officia ut duis minim pariatur sint dolor quis.'
     }, {
-      src: 'images/cat.jpg',
-      heading: 'Cat',
-      text: 'a cat'
+      src: 'images/paper-stack.png',
+      heading: 'Quis nisi incididunt',
+      text: 'Nisi Lorem commodo id adipisicing ea et nulla ad voluptate consequat eu. Culpa esse Lorem in esse ut elit aliquip duis qui. Tempor elit aute do non mollit quis minim minim est proident enim irure magna.'
     }, {
-      src: 'images/cat.jpg',
-      heading: 'Cat',
-      text: 'a cat'
+      src: 'images/checkmark.png',
+      heading: 'Irure aute',
+      text: 'Ad ullamco ex enim officia deserunt tempor non amet velit excepteur in. Sint excepteur nisi nisi ipsum mollit sit exercitation in. Laboris irure qui consequat excepteur eu. Aliqua aliquip non deserunt eiusmod. Est dolore aliquip voluptate non amet sit ex pariatur cupidatat. Anim et aliquip do enim irure nisi non minim ad labore et sint quis qui.'
     }],
     imageTextCombos: [{
-      src: 'images/dog.jpg',
-      heading: 'Dog',
-      text: 'a dog'
+      src: 'images/laptop.jpg',
+      heading: 'Irure velit sunt ipsum minim aliqua aute reprehenderit quis.',
+      text: 'Incididunt non non Lorem nisi tempor labore amet officia non irure. Lorem voluptate irure irure irure ipsum eiusmod. Consectetur commodo ut cupidatat nisi mollit. Voluptate esse cillum dolor mollit.'
     }, {
-      src: 'images/dog.jpg',
-      heading: 'Dog',
-      text: 'a dog'
+      src: 'images/code.jpg',
+      heading: 'Laboris cillum exercitation est nulla duis voluptate esse voluptate.',
+      text: 'Dolor culpa aliquip ipsum dolore adipisicing dolore amet ea nulla. Occaecat ipsum ut ullamco irure culpa duis. Ea incididunt ipsum consequat dolore reprehenderit veniam sit adipisicing.'
     }, {
-      src: 'images/dog.jpg',
-      heading: 'Dog',
-      text: 'a dog'
+      src: 'images/sleeping-cat.jpg ',
+      heading: 'Aute velit esse cupidatat ea nulla duis.',
+      text: 'Deserunt officia officia velit eiusmod enim consectetur exercitation veniam ea fugiat. Fugiat ut consequat minim ea sunt. Adipisicing labore officia sit est culpa amet nisi elit sint. Consequat cillum irure elit culpa Lorem est. Aliquip duis Lorem exercitation et velit voluptate elit officia excepteur consequat cillum aute pariatur aliqua.'
     }],
     testimonials: [{
-      src: 'images/dog.jpg',
-      heading: 'Dog',
-      text: 'a dog'
+      src: 'images/portrait-1.jpg',
+      heading: 'Veniam Ut Commodo',
+      text: 'Adipisicing sunt esse sunt officia et exercitation cillum elit esse id esse elit.'
     }, {
-      src: 'images/dog.jpg',
-      heading: 'Dog',
-      text: 'a dog'
+      src: 'images/portrait-2.jpg',
+      heading: 'Eiusmod',
+      text: 'Et Lorem nisi nostrud excepteur duis sunt cupidatat.'
     }, {
-      src: 'images/dog.jpg',
-      heading: 'Dog',
-      text: 'a dog'
+      src: 'images/portrait-3.jpg',
+      heading: 'Deserunt Proident',
+      text: 'Commodo irure labore consequat pariatur et Lorem ad in nulla exercitation non.'
     }]
   }
 });

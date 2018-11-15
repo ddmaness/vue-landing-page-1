@@ -1,2 +1,31 @@
-.test {
-  display: none; }
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+h1, h2, h3 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  margin: 16px; }
+
+p {
+  font-family: 'Open Sans', sans-serif; }
+
+h1 {
+  font-size: 48px; }
+
+h2 {
+  font-size: 36px; }
+
+h3 {
+  font-size: 24px; }
+
+button {
+  color: white;
+  background-color: #006200;
+  border: none;
+  min-height: 40px;
+  min-width: 40px;
+  padding: 0 16px; }
+
+input {
+  height: 40px; }
