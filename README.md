@@ -8,10 +8,10 @@ In this project I attempt to iterate on [this](https://blackrockdigital.github.i
 
 - The time investment in setting up Gulp is more than made up for by the increased productivity it allows
 
-- Sass makes writting CSS way more enjoyable
+- Sass makes writing CSS way more enjoyable
 
 - Vue has quite a bit in common with React, the change in syntax seems to be the only large hurdle
 
 ## How to run
 
-Clone or download this repository and run `npm install` in the root of the project folder. After all dependencies are downloaded run `gulp` in the project folder to start the development server and enable automatic reloading on changes to Sass, JS, or html files.  `gulp dist` will optimize the images, and JS files for production.
+Clone or download this repository and run `npm install` in the root project directory. After all dependencies are downloaded run `gulp` to start the development server and enable automatic reloading on changes to Sass, JS, or html files.  `gulp dist` will optimize the images, and JS files for production and copy these optimized files to the production `dist` directory.
