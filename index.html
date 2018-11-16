@@ -17,7 +17,7 @@
         <hero>
             <sign-up-form></sign-up-form>
         </hero>
-        <list>
+        <list class="benefits">
             <list-item v-for="(item, key, index) in benefitItems"
             :src='item.src'
             :heading='item.heading'
@@ -32,7 +32,7 @@
         :key='index'
         >
         </image-text-sbs>
-        <list>
+        <list class="testimonials">
             <h2>What people are saying</h2>
             <list-item v-for="(item, key, index) in testimonials"
             :src='item.src'

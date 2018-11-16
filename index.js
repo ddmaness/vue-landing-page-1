@@ -1,40 +1,14 @@
-Vue.component('landing-footer', {
-	template:   `<Footer>
-                <div>
-                    <ul>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">Terms of Use</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                    </ul>
-                    <p>Vue Landing Page [copywrite symbol] 2018</p>
-                </div>
-                <div>
-                    <ul>
-                        <li href="#">[soc media]</li>
-                        <li href="#">[soc media]</li>
-                        <li href="#">[soc media]</li>
-                    </ul>
-                </div>
-                
-                </Footer>`
+Vue.component('page-header', {
+	template: `<Header class="header">
+                    <h3>Vue Landing Page</h3>
+                    <button>Sign In</button>
+                </Header>`
 });
 
-Vue.component('call-to-action', {
-	template:   `<Section class="call-to-action">
-                    <h2>Why wait? Get started today!</h2>
+Vue.component('hero', {
+	template: `<Section class="hero">
+                    <h1>A landing page created using the Vue framework</h1>
                     <slot></slot>
-                </Section>`
-});
-
-Vue.component('image-text-sbs', {
-	props: ['heading', 'text', 'src', 'alt'],
-	template:  `<Section class='image-text-sbs'>
-                    <div>
-                        <h2>{{ heading }}</h2>
-                        <p>{{ text }}</p>
-                    </div>
-                    <div data-src="src"></div>
                 </Section>`
 });
 
@@ -46,25 +20,53 @@ Vue.component('list', {
 
 Vue.component('list-item', {
 	props: ['heading', 'text', 'src', 'alt'],
-	template: `<div>
-					<img height="150px" :src="src">
+	template: `<div class='list-item'>
+					<div class='img-container'>
+						<img height="150px" :src="src">
+					</div>
                     <h3>{{ heading }}</h3>
                     <p>{{ text }}</p>
                 </div>`
 });
 
-Vue.component('page-header', {
-	template: `<Header>
-                    <h3 class="header-text">Vue Landing Page</h3>
-                    <button class="header-btn">Sign In</button>
-                </Header>`
+Vue.component('image-text-sbs', {
+	props: ['heading', 'text', 'src', 'alt'],
+	template:  `<Section class='image-text-sbs'>
+                    <div class='image-text-sbs__text'>
+                        <h2>{{ heading }}</h2>
+                        <p>{{ text }}</p>
+                    </div>
+                    <div class='image-text-sbs__img' :style='{backgroundImage:"url("+src+")"}'></div>
+                </Section>`
 });
 
-Vue.component('hero', {
-	template: `<Section class="hero">
-                    <h1 class="hero-text">A landing page created using the Vue framework</h1>
+Vue.component('call-to-action', {
+	template:   `<Section class="call-to-action">
+                    <h2>Why wait? Get started today!</h2>
                     <slot></slot>
                 </Section>`
+});
+
+Vue.component('landing-footer', {
+	template:   `<Footer class="landing-footer">
+                <div>
+                    <ul class="landing-footer__links">
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Terms of Use</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="landing-footer__social-media">
+                        <li href="#"><img src="./images/facebook.svg"></img></li>
+                        <li href="#"><img src="./images/instagram.svg"></img></li>
+                        <li href="#"><img src="./images/twitter.svg"></img></li>
+                    </ul>
+				</div>
+				<p class="landing-footer__copywrite">Vue Landing Page &copy; 2018</p>
+                
+                </Footer>`
 });
 
 Vue.component('sign-up-form', {
@@ -81,17 +83,17 @@ var app = new Vue({
 			{
 				src: 'images/monitor.png',
 				heading: 'Ut pariatur',
-				text: 'Adipisicing eiusmod amet voluptate nisi consequat magna minim non voluptate. Commodo sint veniam commodo duis cillum in. Elit non aute commodo officia ut duis minim pariatur sint dolor quis.'
+				text: 'Adipisicing eiusmod amet voluptate nisi consequat magna minim non voluptate. Commodo sint veniam commodo duis cillum in.'
 			},
 			{
 				src: 'images/paper-stack.png',
 				heading: 'Quis nisi incididunt',
-				text: 'Nisi Lorem commodo id adipisicing ea et nulla ad voluptate consequat eu. Culpa esse Lorem in esse ut elit aliquip duis qui. Tempor elit aute do non mollit quis minim minim est proident enim irure magna.'
+				text: 'Nisi Lorem commodo id adipisicing ea et nulla ad voluptate consequat eu. Culpa esse Lorem in esse ut elit aliquip duis qui.'
 			},
 			{
 				src: 'images/checkmark.png',
 				heading: 'Irure aute',
-				text: 'Ad ullamco ex enim officia deserunt tempor non amet velit excepteur in. Sint excepteur nisi nisi ipsum mollit sit exercitation in. Laboris irure qui consequat excepteur eu. Aliqua aliquip non deserunt eiusmod. Est dolore aliquip voluptate non amet sit ex pariatur cupidatat. Anim et aliquip do enim irure nisi non minim ad labore et sint quis qui.'
+				text: 'Ad ullamco ex enim officia deserunt tempor non amet velit excepteur in.'
 			},
 		],
 		imageTextCombos: [

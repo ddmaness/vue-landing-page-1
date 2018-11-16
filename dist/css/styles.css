@@ -5,27 +5,302 @@
 h1, h2, h3 {
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
-  margin: 16px; }
+  margin: 16px 0; }
 
 p {
   font-family: 'Open Sans', sans-serif; }
 
 h1 {
   font-size: 48px; }
+  @media screen and (max-width: 400px) {
+    h1 {
+      font-size: 40px; } }
 
 h2 {
   font-size: 36px; }
+  @media screen and (max-width: 450px) {
+    h2 {
+      font-size: 24px; } }
 
 h3 {
   font-size: 24px; }
+  @media screen and (max-width: 450px) {
+    h3 {
+      font-size: 20px; } }
 
 button {
   color: white;
+  font-weight: bold;
   background-color: #006200;
   border: none;
+  border-radius: 5px;
   min-height: 40px;
   min-width: 40px;
   padding: 0 16px; }
+  button:hover {
+    cursor: pointer;
+    background-color: #004e14; }
+
+a {
+  text-decoration: none;
+  color: #006200; }
+  a:hover {
+    color: #004e14; }
 
 input {
-  height: 40px; }
+  height: 40px;
+  width: 400px;
+  margin-right: 16px;
+  text-align: center;
+  font-size: 16px; }
+  @media screen and (max-width: 520px) {
+    input {
+      width: 250px; } }
+  @media screen and (max-width: 360px) {
+    input {
+      width: 200px; } }
+
+/*
+*******************************
+
+Header
+
+********************************
+*/
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 1200px;
+  margin: auto; }
+  @media screen and (max-width: 1250px) {
+    .header {
+      padding: 0 16px; } }
+
+/*
+*******************************
+
+Hero
+
+********************************
+*/
+.hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+  text-align: center;
+  background-image: url("../images/foggy-forest.jpg");
+  background-size: cover;
+  height: 500px; }
+
+/*
+*******************************
+
+List
+
+********************************
+*/
+.list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px; }
+  .list h2 {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    text-align: center; }
+  .list.testimonials img {
+    border-radius: 50%; }
+  .list.benefits img {
+    position: absolute;
+    left: 0; }
+    .list.benefits img:hover {
+      cursor: pointer;
+      -webkit-transform: scale(1.1);
+              transform: scale(1.1); }
+  @media screen and (max-width: 750px) {
+    .list {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      .list h2 {
+        -ms-flex-preferred-size: auto;
+            flex-basis: auto; } }
+
+/*
+*******************************
+
+List Items
+
+********************************
+*/
+.list-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%; }
+  @media screen and (max-width: 750px) {
+    .list-item {
+      -ms-flex-preferred-size: auto;
+          flex-basis: auto;
+      margin-bottom: 20px; } }
+
+.img-container {
+  position: relative;
+  height: 150px;
+  width: 150px; }
+
+/*
+*******************************
+
+Image Text Side By Side
+
+********************************
+*/
+.image-text-sbs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 600px; }
+  .image-text-sbs__text {
+    -ms-flex-item-align: center;
+        align-self: center;
+    padding: 0 48px;
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%; }
+  .image-text-sbs__img {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    background-size: cover;
+    background-position: center; }
+  .image-text-sbs:nth-child(odd) {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse; }
+  @media screen and (max-width: 900px) {
+    .image-text-sbs {
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+      .image-text-sbs__text {
+        padding: 16px;
+        -ms-flex-preferred-size: 100%;
+            flex-basis: 100%; }
+      .image-text-sbs__img {
+        -ms-flex-preferred-size: 100%;
+            flex-basis: 100%; } }
+
+/*
+*******************************
+
+Call to Action
+
+********************************
+*/
+.call-to-action {
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+  text-align: center;
+  background-image: url("../images/foggy-forest.jpg");
+  background-size: cover;
+  background-position: center; }
+
+/*
+*******************************
+
+Landing Footer
+
+********************************
+*/
+.landing-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 40px 0;
+  max-width: 1200px;
+  margin: auto; }
+  .landing-footer__copywrite {
+    padding-top: 16px;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    font-weight: 100;
+    font-size: 12px; }
+  .landing-footer__links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .landing-footer__links li {
+      margin-right: 16px; }
+  .landing-footer__social-media {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .landing-footer__social-media img {
+      height: 24px;
+      margin-right: 16px; }
+      .landing-footer__social-media img:hover {
+        cursor: pointer; }
+  @media screen and (max-width: 1240px) {
+    .landing-footer {
+      padding: 16px; } }
+  @media screen and (max-width: 490px) {
+    .landing-footer__social-media {
+      padding-top: 16px; } }
